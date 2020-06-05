@@ -1,0 +1,703 @@
+* {
+    font-family: sans-serif;
+    outline-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(147, 147, 148, 0.5);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 
+    This is responsible for creating the home page background. The linear gradient
+    property allows us to add the blue overlay on the image.
+ */
+.index-container {
+    margin: 0;
+    padding: 0;
+    height: 535px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(55, 0, 255, 0.5)), url("images/school.jpg");
+    background-size: cover;
+}
+
+/* This makes the header fixed to the postion 0 at the top  of the page. */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+/* 
+    Creates the styling for the navigation bar. The property flex allows the nav bar
+    to become responsive and help simplify the layout, nowrap allows text and elements
+    to flow to the next line if too much space is taken up in the origional line.  
+*/
+nav {
+    height: 60px;
+    background-color: rgba(2, 29, 116, 0.9);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* 
+    This decorates the anchor tags of the nav bar.
+*/
+nav a {
+    margin-right: 2%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 60px;
+    border: none;
+}
+
+/* 
+    Once the user hovers over the link the text changes color and size.
+    ease-in slows the animation speed.
+*/
+nav a:hover {
+    font-size: 21px;
+    color: goldenrod;
+    transition: ease-in 0.4s;
+}
+
+/* 
+    This is to make sure the nav bar does not overlap with the contents
+    on the about and apply page.
+*/
+.content-container, #apply {
+    margin-top: 5%;
+}
+
+/* 
+    Sets the properties for the class logo.
+*/
+.logo {
+    margin: 0;
+    padding-bottom: 3px;
+    order: -1;
+    flex: -1;
+    height: 55px;
+}
+
+/* 
+    Sets the size for the image/logo.
+*/
+header nav img {
+    height: 55px;
+    width: 70px;
+}
+
+header nav h1 {
+    margin: 0;
+    margin-left: 2%;
+    order: -1;
+    flex: 1;
+    line-height: 60px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+/* 
+    This is to style the div containing the splash items such as the image and
+    heading on the index page.
+*/
+.splash {
+    margin: auto;
+    padding-top: 8%;
+    width: 450px;
+    height: 400px;
+}
+
+/* 
+    This sizes the image/logo within the splash container.
+*/
+.splash img {
+    margin-left: 25%;
+    width: 200px;
+    height: 170px;
+}
+
+/* 
+    This changes the color of the heading within the splash container.
+*/
+.splash h1 {
+    color: rgb(255, 255, 255);
+}
+
+/* 
+    This properites are to decorate the footer as the name says. Flex makes it
+    responsive. The position relative set the content relative to it's position,
+    therefor it's properties won't overlap with that of others. The padding 
+    spaces the content.
+*/
+
+//Footer
+.footer { 
+  background: #303036;
+  color: #d3d3d3; 
+  height: 30px;	
+  position: realtive;
+}
+
+.footer .footer-content{
+  border: 2px solid blue;
+  height: 310px;
+  display: flex;
+}
+
+.footer .footer-content .footer-section {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid gray;
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+    color: blue;
+    }
+
+.footer .footer-content .about .contact span {
+  display: block;
+  font-size: 1.1em;
+  margin-size: 8px;
+}
+
+.footer .footer-contetn .links ul a {
+  display: block; 
+  margin-bottom: 10px;
+  font-size: 1.2em; 
+  transition: all .2s;
+  }
+
+.footer .footer-content .links ul a:hover {
+color: white;
+margin-left: 15px;
+transition: all .2s;
+}
+
+
+.footer .footer-content .about .socials a {
+    border: 1px solid gray;
+    width: 20px;
+    height: 20px;
+    padding-top: 2px;
+    margin-right: 2px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.2em;
+    border-radius: 2px;
+}
+
+.footer .footer-content .contact-form .contact-input {
+    background: #D3D3DC;
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .6rem 1.2rem;
+}
+
+.footer .footer-bottom {
+  background: #110B66	;
+  color: #CCCCD8;
+  height: 35px;
+  width: 100%;
+  text-align: center;
+  positoin absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 10px;
+}
+
+/*------------------------- Event Page -------------------------*/
+
+/* 
+    This sets the container within which all of the about pages' content will 
+    be placed in.
+*/
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px
+}
+
+/* 
+    Sets the properties for the event and about pages intro/splash.
+*/
+.content-intro {
+    display: inline-flex;
+    margin: auto;
+    padding: 15px;
+    border: 3px solid goldenrod;
+    background-color: rgba(2, 29, 116, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content-intro img {
+    width: 80px;
+    height: 60px;
+}
+
+.content-intro h1 {
+    color: rgb(253, 188, 22);
+}
+
+.content-intro p {
+    align-self: center;
+    color: white;
+    float: center;
+}
+
+/* 
+    Edits the width of the splash at the top of the event page.
+*/
+#event-intro {
+    width: 96.5%;
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(55, 0, 255, 0.5)), url("images/greetings.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 
+    This changes the width and margin of the div container with the id of 
+    "student-info".
+*/
+#student-info {
+    width: 700px;
+    margin: 2.9%;
+}
+
+/* 
+    This centers the h1 containing the id event-heading. 
+*/
+#event-heading {
+    text-align: center;
+}
+
+/* 
+    This edits the properties of the image containing the id "school-one"
+*/
+#school-one {
+    width: 20%;
+    height: 400px;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+/* 
+    This sets the properties for the container which houses the event cards.
+    Flex-wrap allows the content to move to the next line if the space is consumed
+    within the first line. Space-evenly lets the content to spaced the width
+    from one another.
+*/
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+/* 
+    These are the properties for the cards themself. Overflow prevents content
+    from exiting their containers. Padding moves content further away from the
+    containers borders. Border radius curves the border.
+*/
+.event-container .event-item {
+    margin-top: 5%;
+    padding: 10px;
+    width: 300px;
+    border: 3px solid rgb(0, 202, 253);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(36, 36, 36); /*for compatibility with older browsers*/
+	background-image: linear-gradient(rgba(27, 27, 27, 0.5),rgb(14, 53, 77));
+}
+
+/* 
+    This edits the properties of the image within the event card.
+*/
+.event-container .event-item img {
+    margin-top: 2%;
+    margin-left: 3%;
+    width: 280px;
+    height: 250px;
+    border: 2px solid rgb(19, 100, 151);
+    border-radius: 10px;
+}
+
+/* 
+    This edits the properties of the text/paragraph within the event card.
+*/
+.event-container .event-item p {
+    word-wrap: break-word;
+    margin-right: 5%;
+    margin-left: 5%;
+    color: white;
+}
+
+/*------------------------- Apply Page -------------------------*/
+
+#apply {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 
+    Sets the max width and margin for the forms container. 
+*/
+.wrapper{
+	width: 800px;
+	margin:5% auto;
+}
+
+/* 
+    This is the form element itself.
+*/
+.form-area{
+    display: flex;
+    border: 5px solid rgb(0, 0, 255);
+	background:rgba(0,0,0, 0.8);
+	border-radius: 25px;
+	padding: 1.9em;
+}
+
+/* 
+    This is the content which goes with in the form.
+*/
+.details-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	margin-right: 2px;
+}
+
+/* 
+    This sets the width for the input container. Order allows us to list these 
+    elements in a desired format.
+*/
+.details-area .input-field {
+    width: 100%;
+    order: 0;
+}
+
+.details-area .input-field label {
+    display: inline-block;
+    width: 250px;
+}
+
+
+/* 
+    This edits the properties of the input boxes that fall under the class 
+    "input-field".
+*/
+.details-area .input-field input {
+	background: transparent;
+    color: #fff;
+    border-radius: 15px;
+    margin-left: 19%;
+    width: 41%;
+}
+
+#input{
+    background: transparent;
+    color: #fff;
+    border-radius: 15px;
+    margin-left: 50%;
+    width: 41%;
+}
+
+
+/* 
+    This adds padding and margin-bottom to the input boxes as well as the submit
+    button. The purpose is to space the content evenly and make it more presentable.
+*/
+.details-area input,
+.details-area button{
+	padding: 2%;
+	margin-bottom: 1em;
+}
+
+/* 
+    Sets the properties for the radio buttons.
+*/
+.details-area .radio-field {
+    width: 50%;
+    order: 1;
+}
+
+.details-area .radio-field input {
+    margin-left: 20px;
+}
+
+.details-area .msg-area{
+    margin-left: 4%;
+    order:2;
+}
+
+/* 
+    Edites the properties of the textarea within the form.
+*/
+.details-area .msg-area > textarea{
+    flex:20;
+    height: 210px;
+    width: 300px;
+    min-width: 18em;
+    border: 2px solid white;
+    border-radius: 10px;
+    background:transparent;
+	color:#fff;
+    padding: 15px;
+    order: 3;
+}
+
+/* 
+    This edites the prperties of the submit button within the form. It 
+    adds padding and background color for presentability.
+*/
+.details-area button{
+    order: 4;
+	background:blue;
+	color:#fff;
+	border:0;
+	padding: 15px 50px;
+	border-radius: 40px;
+
+}
+
+label{
+	color: #fff;
+	line-height: 40px;
+
+}
+h2{
+	display: flex;
+	justify-content: center
+}
+
+/*------------------------- About Page -------------------------*/
+
+/* 
+    This sets the properties for the hidden contact us form. Once it is displayed
+    it'll cover the entire page and will prevent scrolling.
+*/
+.contact {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: ease-in 0.5s;
+}
+
+/* 
+    This is the properties of the button which displays an "X".
+*/
+.cancel {
+    top: 0;
+    margin-left: 99%;
+    padding: 10px 15px 10px 15px;
+    font-size: 16px;
+    color: white;
+    border: 2px solid rgb(3, 169, 244);
+    transition: ease-in 0.5s;
+}
+
+/* 
+    The properties changes once the button is hovered over.
+*/
+.cancel:hover {
+    font-size: 15px;
+    color: rgb(3, 169, 244);
+    border: 2px solid rgb(255, 255, 255);
+    transition: ease-in 0.5s;
+}
+
+/* 
+    This sets the properties for the class "text-box". This class is used to make
+    text stand out from the rest of the page. Word-wrap: break all prevents the text
+    from continuing once there is no space left. When this happens the text automatically
+    breaks to a new line.
+*/
+.text-box {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 5%;
+    background-color: rgb(158, 158, 158);
+    border-radius: 10px;
+    word-wrap: break-all;
+}
+
+.text-box h1 {
+    margin-left: 5%;
+}
+
+.text-box p {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+}
+
+.text-box ul {
+    margin-left: 5%;
+    width: 100%;
+}
+
+/* 
+    This sets the decoration for the glass like button at the bottom of the page.
+    The position relative property prevents the prperties from affecting other divs
+    properties.
+*/
+.glass{
+	/* background styles */
+	position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+	padding: 15px 25px;
+	background-color: green; /*for compatibility with older browsers*/
+	background-image: linear-gradient(blue,lightblue);
+
+    border-radius: 3px;
+    box-shadow: 0px 1px 4px -2px #333;
+    text-shadow: 0px -1px #333;
+
+	/* text styles */
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-family: sans-serif;
+    font-weight: 100;
+}
+
+/* 
+    This adds more properties to the button once the main properties load.
+*/
+.glass:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+.glass:hover{
+	background: linear-gradient(rgb(0, 18, 119),rgb(0, 204, 255));
+}
+
+/* 
+    Sets the properties for the form box thats with in the hidden contact form.
+    Top, left 50% and transform centers the box within its container.
+*/
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    padding: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(3, 169, 244);
+    border-radius: 10px;
+}
+
+/* 
+    Sets the properties for the h2 heading in the box.
+*/
+.box h2 {
+    margin: 0, 0, 30px;
+    padding: 0;
+    color: rgb(253, 253, 253);
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.box .inputBox {
+    position: relative;
+}
+
+/* 
+    Sets the properties for the inputs and textarea. Color sets the text color,
+    letter-spacing space the letters further apart. Outline none removes the blue
+    outline that displays once the user selected the element.
+*/
+.box .inputBox input, .box .inputBox textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(253, 253, 253);
+    letter-spacing: 1px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid rgb(253, 253, 253);
+    outline: none;
+    background: transparent;
+}
+
+/* 
+    This sets the properties for the labels of the input form.
+*/
+.box .inputBox label {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    padding: 10px, 0;
+    font-size: 16px;
+    color: rgb(3, 169, 244);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/* 
+    This prevents text from flowing over the text area. 
+*/
+.box .inputBox textarea {
+    overflow: hidden;
+}
+
+/* 
+    element[attribute=value] in this case is used to target the input with the type
+    "submit". This changes the properties for the submit button.
+*/
+.box input[type="submit"] { 
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(253, 253, 253);
+    background: rgb(3, 169, 244);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: ease-in 0.5s;
+}
+
+/* 
+    This edits the properties once the user hovers over the submit buttom.
+*/
+.box input[type="submit"]:hover {
+    background: transparent;
+    color: rgb(3, 169, 244);
+    border: 2px solid rgb(3, 169, 244);
+    font-size: 15px;
+    transition: ease-in 0.5s;
+}
